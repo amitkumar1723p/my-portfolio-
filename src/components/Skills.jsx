@@ -75,7 +75,7 @@ export default function Skills() {
         >
             {/* HEADER */}
             <h2 className="text-center text-3xl font-semibold mb-3">
-                My Skills
+                My  <span className="text-blue-500">Skills</span>
             </h2>
 
             <p className="text-center text-gray-400 max-w-2xl mx-auto mb-14">
