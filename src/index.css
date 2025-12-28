@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior:auto;
+}
+
 /* GLOBAL */
 body {
   margin: 0;
@@ -105,3 +109,55 @@ body::after {
   animation: lightningPulse 6s ease-in-out infinite;
   filter: blur(120px);
 }
+
+
+
+
+
+@keyframes spinSlowReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-slow-reverse {
+  animation: spinSlowReverse 14s linear infinite;
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.delay-150 { animation-delay: 150ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-500 { animation-delay: 500ms; }
+
+
+@keyframes borderPulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.animate-border-pulse {
+  animation: borderPulse 1.8s ease-in-out infinite;
+}
+
+

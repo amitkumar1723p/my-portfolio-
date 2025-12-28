@@ -3,6 +3,7 @@
 
 import useReveal from "../hooks/useReveal"
 import Amit from '../assets/amit.png'
+import Resume from '../assets/amit.pdf'
 
 export default function Hero() {
     const [ref, show] = useReveal();
@@ -61,7 +62,7 @@ export default function Hero() {
                         </a>
 
                         <a
-                            href="/Amit_Kumar_Resume.pdf"
+                            href={Resume}
                             download
                             className="px-6 py-3 rounded-full
                border border-pink-500/40
@@ -93,7 +94,7 @@ export default function Hero() {
                     />
 
                     {/* ================= MERN BADGE ================= */}
-                    <div className="absolute right-0 top-1/2 translate-x-1/3 -translate-y-1/2">
+                    {/* <div className="absolute right-0 top-1/2 translate-x-1/3 -translate-y-1/2">
                         <div
                             className="relative w-28 h-28 rounded-full flex items-center justify-center
                 border border-purple-500/40
@@ -104,6 +105,30 @@ export default function Hero() {
                                 MERN
                             </span>
                         </div>
+                    </div> */}
+
+
+                    {/* ================= STACK BADGES ================= */}
+                    <div className="absolute right-0 top-1/2 translate-x-1/3 -translate-y-1/2 space-y-4">
+
+                        {/* WEB */}
+                        <div className="relative w-28 h-28 rounded-full flex items-center justify-center
+    border border-blue-500/40 bg-black/40 backdrop-blur">
+                            <div className="absolute inset-0 rounded-full border border-dashed border-blue-500/40 animate-spin-slow" />
+                            <span className="text-xs tracking-widest text-blue-400 font-semibold">
+                                WEB
+                            </span>
+                        </div>
+
+                        {/* MOBILE */}
+                        <div className="relative w-28 h-28 rounded-full flex items-center justify-center
+    border border-pink-500/40 bg-black/40 backdrop-blur">
+                            <div className="absolute inset-0 rounded-full border border-dashed border-pink-500/40 animate-spin-slow-reverse" />
+                            <span className="text-xs tracking-widest text-pink-400 font-semibold">
+                                MOBILE
+                            </span>
+                        </div>
+
                     </div>
 
                 </div>

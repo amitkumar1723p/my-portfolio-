@@ -157,15 +157,38 @@ export default function Projects() {
 
                         {/* CTA */}
                         <div className="mt-6">
-                            <a
-                                href={p.live}
-                                target="_blank"
-                                className="inline-flex items-center gap-2 text-blue-400
-                  group-hover:text-blue-300 transition"
-                            >
-                                View Live
-                                <span className="group-hover:translate-x-1 transition">→</span>
-                            </a>
+                            {p.status === "live" ? (
+                                <a
+                                    href={p.live}
+                                    target="_blank"
+                                    className="group relative inline-flex items-center gap-2 px-4 py-2
+  text-blue-400 font-medium rounded-full
+  border border-blue-500/30
+  overflow-hidden
+  transition-all duration-300
+  hover:text-white hover:border-blue-400"
+                                >
+                                    {/* Animated Border Glow */}
+                                    <span className="absolute inset-0 rounded-full
+    border border-blue-500/40
+    animate-border-pulse" />
+
+                                    {/* Text */}
+                                    <span className="relative z-10">View Live</span>
+
+                                    {/* Arrow */}
+                                    <span className="relative z-10 transition-transform duration-300
+    group-hover:translate-x-1">
+                                        →
+                                    </span>
+                                </a>
+                            ) : (
+                                <span className="inline-flex items-center gap-2
+      text-yellow-400 bg-yellow-500/10
+      px-3 py-1 rounded-full text-sm">
+                                    🚧 Under Development
+                                </span>
+                            )}
                         </div>
 
                         {/* GLOW LINE (DECORATIVE) */}

@@ -11,7 +11,6 @@ export default function App() {
     <>
       <Particles />
       <Navbar />
-
       <Hero />
       <Skills />
       <Specialities />
