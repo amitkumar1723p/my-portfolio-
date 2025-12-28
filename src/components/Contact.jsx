@@ -8,10 +8,28 @@ import {
 
 export default function Contact() {
     return (
+
+
+
+
+
+
+
+
+
+
+
         <section
             id="contact"
             className="relative py-24 bg-[#0B1120] overflow-hidden"
         >
+
+
+
+
+
+
+
             {/* Ambient Glow */}
             <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-purple-600/30 blur-[180px]" />
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/20 blur-[160px]" />
