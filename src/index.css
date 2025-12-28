@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: radial-gradient(
+      ellipse at top,
+      rgba(124, 58, 237, 0.15),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      rgba(37, 99, 235, 0.12),
+      transparent 60%
+    ),
+    #0a0a0f;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* STARS LAYER */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/stars.png");
+  background-size: cover;
+  opacity: 0.15;
+  z-index: -2;
+}
+
+/* NOISE / DEPTH */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(168, 85, 247, 0.12), transparent 40%),
+              radial-gradient(circle at 70% 60%, rgba(59, 130, 246, 0.12), transparent 40%);
+  z-index: -1;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 14s linear infinite;
+}
+
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 14s linear infinite;
+}
+
+
+@keyframes nebulaMove {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-40px, -30px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.nebula {
+  animation: nebulaMove 20s ease-in-out infinite;
+}
+
+
+/* PINK LIGHTNING CLOUD EFFECT */
+@keyframes lightningPulse {
+  0% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+  60% {
+    opacity: 0.35;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+}
+
+.lightning-glow {
+  animation: lightningPulse 6s ease-in-out infinite;
+  filter: blur(120px);
+}
