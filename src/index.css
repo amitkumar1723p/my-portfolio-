@@ -44,28 +44,28 @@ body::after {
   z-index: -1;
 }
 
-@keyframes spinSlow {
+ @keyframes spinSlow {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-.animate-spin-slow {
-  animation: spinSlow 14s linear infinite;
-}
-
-
-@keyframes spinSlow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes spinSlowReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 
 .animate-spin-slow {
-  animation: spinSlow 14s linear infinite;
+  animation: spinSlow 8s linear infinite;
 }
+
+.animate-spin-slow-reverse {
+  animation: spinSlowReverse 10s linear infinite;
+}
+
+
+
+
+
 
 
 @keyframes nebulaMove {

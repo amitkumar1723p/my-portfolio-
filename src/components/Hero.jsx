@@ -26,7 +26,7 @@ export default function Hero() {
             <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
 
                 {/* ================= LEFT CONTENT ================= */}
-                <div>
+                <div className="order-2 md:order-1">
                     <p className="text-gray-400 mb-4">
                         This is your developer
                     </p>
@@ -35,9 +35,77 @@ export default function Hero() {
                         <span className="text-white/90">Amit</span>
                         <span className="text-blue-500">Kumar</span>
                     </h1>
-                    <p className="mt-4 text-lg md:text-xl text-white/90 font-medium">
+                    <p className="mt-4 text-lg md:text-xl text-white/90 font-medium mb-4">
                         Full-Stack Web & Mobile Developer
                     </p>
+
+
+                    <div className="flex items-center gap-4 flex-wrap">
+
+                        {/* WEB BADGE */}
+                        <div className="relative group">
+                            {/* animated ring */}
+                            <span className="absolute inset-0 rounded-full
+      border border-blue-500/50
+      animate-spin-slow
+    " />
+
+                            {/* glow */}
+                            <span className="absolute inset-0 rounded-full
+      bg-blue-500/20 blur-lg
+      opacity-0 group-hover:opacity-100 transition
+    " />
+
+                            {/* content */}
+                            <span className="
+      relative z-10
+      px-5 py-2
+      rounded-full
+      bg-black/40 backdrop-blur
+      border border-blue-500/40
+      text-blue-400
+      text-xs sm:text-sm
+      tracking-widest font-semibold
+      animate-pulse
+    ">
+                                WEB
+                            </span>
+                        </div>
+
+                        {/* MOBILE BADGE */}
+                        <div className="relative group">
+                            {/* animated ring */}
+                            <span className="absolute inset-0 rounded-full
+      border border-pink-500/50
+      animate-spin-slow-reverse
+    " />
+
+                            {/* glow */}
+                            <span className="absolute inset-0 rounded-full
+      bg-pink-500/20 blur-lg
+      opacity-0 group-hover:opacity-100 transition
+    " />
+
+                            {/* content */}
+                            <span className="
+      relative z-10
+      px-5 py-2
+      rounded-full
+      bg-black/40 backdrop-blur
+      border border-pink-500/40
+      text-pink-400
+      text-xs sm:text-sm
+      tracking-widest font-semibold
+      animate-pulse
+    ">
+                                MOBILE
+                            </span>
+                        </div>
+
+                    </div>
+
+
+
 
                     <p className="mt-5 text-gray-400 max-w-xl leading-relaxed">
                         I build production-ready web and mobile applications using the MERN stack
@@ -76,7 +144,7 @@ export default function Hero() {
                 </div>
 
                 {/* ================= RIGHT IMAGE + LIGHTNING GLOW ================= */}
-                <div className="relative flex justify-center">
+                <div className="relative flex justify-center order-1 md:order-2">
 
                     {/* BIG PINK CLOUD LIGHT (LIGHTNING STYLE) */}
                     <div
@@ -108,28 +176,7 @@ export default function Hero() {
                     </div> */}
 
 
-                    {/* ================= STACK BADGES ================= */}
-                    <div className="absolute right-0 top-1/2 translate-x-1/3 -translate-y-1/2 space-y-4">
 
-                        {/* WEB */}
-                        <div className="relative w-28 h-28 rounded-full flex items-center justify-center
-    border border-blue-500/40 bg-black/40 backdrop-blur">
-                            <div className="absolute inset-0 rounded-full border border-dashed border-blue-500/40 animate-spin-slow" />
-                            <span className="text-xs tracking-widest text-blue-400 font-semibold">
-                                WEB
-                            </span>
-                        </div>
-
-                        {/* MOBILE */}
-                        <div className="relative w-28 h-28 rounded-full flex items-center justify-center
-    border border-pink-500/40 bg-black/40 backdrop-blur">
-                            <div className="absolute inset-0 rounded-full border border-dashed border-pink-500/40 animate-spin-slow-reverse" />
-                            <span className="text-xs tracking-widest text-pink-400 font-semibold">
-                                MOBILE
-                            </span>
-                        </div>
-
-                    </div>
 
                 </div>
 
