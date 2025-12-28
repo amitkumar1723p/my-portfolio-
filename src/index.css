@@ -3,6 +3,9 @@
 html {
   scroll-behavior:auto;
 }
+body {
+  animation: fadeIn 0.4s ease;
+}
 
 /* GLOBAL */
 body {
