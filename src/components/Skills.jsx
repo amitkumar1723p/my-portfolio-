@@ -85,7 +85,7 @@ export default function Skills() {
         <section
             ref={ref}
             id="skills"
-            className={`py-24 transition-all duration-700
+            className={`py-24 transition-all duration-700  px-6
       ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
             {/* HEADER */}
@@ -99,7 +99,7 @@ export default function Skills() {
             </p>
 
             {/* GRID */}
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 {skills.map((skill) => (
                     <div
                         key={skill.title}
@@ -127,7 +127,8 @@ export default function Skills() {
                         </h3>
 
                         {/* DESC */}
-                        <p className="text-gray-400 text-sm leading-relaxed pr-4">
+
+                        <p className="text-gray-400 text-sm leading-relaxed ">
                             {skill.desc}
                         </p>
 
