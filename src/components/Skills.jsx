@@ -23,60 +23,63 @@ export default function Skills() {
 
 
 
-    const iconColors = {
-        FaReact: "#61DAFB",
-        SiRedux: "#764ABC",
-        SiTailwindcss: "#38BDF8",
-        SiJavascript: "#F7DF1E",
 
-        FaMobileAlt: "#4ADE80",
-
-        FaNodeJs: "#68A063",
-        SiExpress: "#ffffff",
-        SiMongodb: "#47A248",
-
-        FaLock: "#F59E0B",
-        SiFirebase: "#FFCA28",
-
-        SiSocketdotio: "#ffffff",
-
-        FaDocker: "#2496ED",
-        FaGithub: "#ffffff",
-        FaAws: "#FF9900",
-    };
 
     const skills = [
         {
             title: "Frontend Development",
             desc: "Building modern, scalable UIs using React.js, Redux Toolkit, RTK Query, and Tailwind CSS.",
-            icons: [FaReact, SiRedux, SiTailwindcss, SiJavascript],
+            icons: [
+                { icon: FaReact, color: "#61DAFB" },
+                { icon: SiRedux, color: "#764ABC" },
+                { icon: SiTailwindcss, color: "#38BDF8" },
+                { icon: SiJavascript, color: "#F7DF1E" },
+            ],
         },
         {
             title: "Mobile App Development",
             desc: "Developing high-performance Android apps using React Native with smooth animations and production builds.",
-            icons: [FaReact, FaMobileAlt],
+            icons: [
+                { icon: FaReact, color: "#61DAFB" },
+                { icon: FaMobileAlt, color: "#4ADE80" },
+            ],
         },
         {
             title: "Backend Development",
             desc: "Designing secure and scalable backend systems using Node.js, Express, MongoDB, and REST APIs.",
-            icons: [FaNodeJs, SiExpress, SiMongodb],
+            icons: [
+                { icon: FaNodeJs, color: "#68A063" },
+                { icon: SiExpress, color: "#ffffff" },
+                { icon: SiMongodb, color: "#47A248" },
+            ],
         },
         {
             title: "Authentication & Security",
             desc: "Implementing secure authentication flows using JWT, OTP login, RBAC, and API rate limiting.",
-            icons: [FaLock, SiFirebase],
+            icons: [
+                { icon: FaLock, color: "#F59E0B" },
+                { icon: SiFirebase, color: "#FFCA28" },
+            ],
         },
         {
             title: "Real-Time Systems",
             desc: "Building real-time features like live tracking, multiplayer systems, and notifications using Socket.IO & Firebase.",
-            icons: [SiSocketdotio, SiFirebase],
+            icons: [
+                { icon: SiSocketdotio, color: "#ffffff" },
+                { icon: SiFirebase, color: "#FFCA28" },
+            ],
         },
         {
             title: "DevOps & Tools",
             desc: "Managing deployments, containers, and CI/CD pipelines using Docker, GitHub, AWS, and cloud infrastructure.",
-            icons: [FaDocker, FaGithub, FaAws],
+            icons: [
+                { icon: FaDocker, color: "#2496ED" },
+                { icon: FaGithub, color: "#ffffff" },
+                { icon: FaAws, color: "#FF9900" },
+            ],
         },
     ];
+
 
     return (
         <section
@@ -109,11 +112,11 @@ export default function Skills() {
                     >
                         {/* ICONS */}
                         <div className="flex gap-4 text-2xl mb-5">
-                            {skill.icons.map((Icon, i) => (
+                            {skill.icons.map(({ icon: Icon, color }, i) => (
                                 <Icon
                                     key={i}
+                                    style={{ color }}
                                     className="transition-transform duration-300 group-hover:scale-110"
-                                    style={{ color: iconColors[Icon.name] }}
                                 />
                             ))}
                         </div>
@@ -124,7 +127,7 @@ export default function Skills() {
                         </h3>
 
                         {/* DESC */}
-                        <p className="text-gray-400 text-sm leading-relaxed">
+                        <p className="text-gray-400 text-sm leading-relaxed pr-4">
                             {skill.desc}
                         </p>
 
