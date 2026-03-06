@@ -3,7 +3,7 @@
 
 import useReveal from "../hooks/useReveal"
 import Amit from '../assets/amit.png'
-import Resume from '../assets/amit.pdf'
+import Resume from '../assets/resume.pdf'
 
 export default function Hero() {
     const [ref, show] = useReveal();
